@@ -1,22 +1,16 @@
 # Backpropagation-MLP
 
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
-
-#Introduction
+# Introduction
 
 With the backpropagation of the neural network, It's used for yellow color detection. Completely programmed in Java.
 
-#Diagram of the perceptron used
+# Diagram of the perceptron used
 ![1](https://user-images.githubusercontent.com/75210642/196562346-82d79c73-019e-455f-bb04-b05244eb9219.png)
 > multilayer perceptron diagram
 
 The multilayer perceptron diagram we use 3 inputs, for the color RED, GREEN, BLUE, respectively. Use 1 hidden layer of 4 neurons in test mode, according to the training, it's evident that with only 4 neurons in the hidden layer it was enough, and 1 single output which indicates that if it's a negative value, for example, -0.995 won't correspond to the color of the tape yellow and therefore the pixel will be assigned a gray color (127/127/127), if it's a positive value for example, 0.995 will correspond to the color of the yellow tape and the pixel will be assigned a white color (255 /255/255).
 
-#Used Examples
+# Used Examples
 ![2](https://user-images.githubusercontent.com/75210642/196564201-e88f1b15-7b77-4448-9429-6ef27bcbc20b.png)
 > Examples divided by percentages (Ordered).
 
@@ -26,7 +20,7 @@ The multilayer perceptron diagram we use 3 inputs, for the color RED, GREEN, BLU
 The examples we used were a total of 60. They were taken manually with Paint 80% being the values of each pixel corresponding to those of the track and those of the environment. For the other 20% it's the values of the yellow tape, the different yellow colors.
 The training examples to be used in the training will be the same, only they'll be mixed.
 
-#Results Obtained
+# Results Obtained
 
 ![4](https://user-images.githubusercontent.com/75210642/196565732-1f4b622c-0c70-49a1-a199-a5fe9bd876c4.png)
 >Image reading with the multilayer perceptron.
