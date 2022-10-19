@@ -28,7 +28,6 @@ public class NuevoPerceptron {
     private double yiTotalT[][] = new double[3][307200];
     BufferedImage Imagen2;
     
-    
     public void NeuronasOcultas(){       
        int z = 0;
        int y = 0;
@@ -76,6 +75,7 @@ public class NuevoPerceptron {
             //System.out.println("yi: " + yi[o]);  //AQUI
        }
     }
+    
     public void ImagenFinal() {
         for(int a = 0;a < yi.length;a++) {
             if(yi[a] < 0){  
@@ -114,11 +114,11 @@ public class NuevoPerceptron {
        for(int c=0; c<yiTotal.length; c++) {
             for(int h=0; h<yiTotal[c].length; h++) {
                 for(int w=0; w<yiTotal[c][h].length; w++) {
-                    //System.out.print(yiTotal[c][h][w]+"\t");
+                    System.out.print(yiTotal[c][h][w]+"\t");
                 }
-                //System.out.println("");
+                System.out.println("");
             }
-            //System.out.println("");
+            System.out.println("");
         }
        
        for(int a = 0;a < yiTotalT.length;a++) {

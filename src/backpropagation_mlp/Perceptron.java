@@ -41,6 +41,7 @@ public class Perceptron extends Ejemplos {
             //System.out.println();
         }
     }
+    
     public void umbralesJK() {
         for (int x=0; x < UmbralesJ.length; x++) {
                 UmbralesJ[x] = Math.random() * (upper - lower) + lower;
