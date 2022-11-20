@@ -261,15 +261,6 @@ public final class FrmCamara extends javax.swing.JFrame {
             textoBotonesCargoCamara();
             contador++;
         }
-        /*File salidaImagen = new File("C:\\Users\\CAMILO\\Documents\\UNIVERSIDAD\\INTELIGENCIA ARTIFICIAL\\Foto\\Foto"+contador+".jpg");
-        try{
-                ImageIO.write(ruta, "jpg", salidaImagen);             
-        }catch(Exception e){
-            System.out.println("Error: "+ e);
-        }
-        btnGuardar.setEnabled(false);
-        btnCamara.setText("CAPTURAR FOTO");
-        contador++;*/
     }//GEN-LAST:event_btnGuardarActionPerformed
     
     /**

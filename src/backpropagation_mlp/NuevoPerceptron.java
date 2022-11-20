@@ -39,7 +39,6 @@ public class NuevoPerceptron {
                             z = 0;
                             y=0;
                         }
-                        //System.out.println(v + " | " + c +" | "+ h + " | " + z);
                         hj[v] = (Entradas3D[0][c][h]*PesosJK[z][0])+(Entradas3D[1][c][h]*PesosJK[z][1])+(Entradas3D[2][c][h]*PesosJK[z][2])-UmbralesJ[z];z++;
                         y++;
                         v++;
@@ -47,15 +46,8 @@ public class NuevoPerceptron {
             }
         }
        
-       for (int x=0; x < hj.length; x++) {
-                //System.out.println("hj: " + hj[x]);
-        }
-       
        for(int m=0; m < yj.length;m++){
            yj[m] = (2/(1+Math.pow(Math.E, (-lambda*hj[m]))))-1;
-       }
-       for (int o=0; o < yj.length; o++) {
-            //System.out.println("yj: " + yj[o]);
        }
     }
     public void NeuronasEjectoras(){
@@ -64,15 +56,9 @@ public class NuevoPerceptron {
            hi[p] = (yj[h]*PesosIJ[0])+(yj[h+1]*PesosIJ[1])+(yj[h+2]*PesosIJ[2])+(yj[h+3]*PesosIJ[3])-UmbralesI[0];
            h = h + 4;
        }
-       for (int o=0; o < hi.length; o++) {
-            //System.out.println("hi: " + hi[o]);
-       }
        
        for(int p=0; p < yi.length; p++) {
            yi[p] = (2/(1+Math.pow(Math.E, (-lambda*hi[p]))))-1;
-       }
-       for (int o=0; o < yi.length; o++) {
-            //System.out.println("yi: " + yi[o]);  //AQUI
        }
     }
     
@@ -87,11 +73,7 @@ public class NuevoPerceptron {
                yiT2[a] = 1;
                yiT3[a] = 1;
             }
-        }   
-        for(int a = 0;a < yiT1.length;a++) {
-            //System.out.println(yiT1[a]+" | "+yiT2[a]+" | "+yiT3[a]);  //AQUI
         }
-        //System.out.println("");
         
         for(int a = 0;a < yi.length;a++) {
             yiTotalT[0][a] = yiT1[a];
@@ -108,7 +90,6 @@ public class NuevoPerceptron {
                yiTotal[2][x][b] = yiT3[n];
                n+=1;
            }
-       
         }
        
        for(int c=0; c<yiTotal.length; c++) {
@@ -119,29 +100,11 @@ public class NuevoPerceptron {
                 System.out.println("");
             }
             System.out.println("");
-        }
-       
-       for(int a = 0;a < yiTotalT.length;a++) {
-            for(int b = 0;b < yiTotalT[a].length;b++) {
-            //System.out.print(yiTotalT[a][b]+"\t");  //AQUI
-            }
-            //System.out.println("");
-        }
-       
-       Imagen2 = observador.ModificarImagen(Imagen1, yiTotalT);
-       
+        } 
+        Imagen2 = observador.ModificarImagen(Imagen1, yiTotalT);
     }
-
-    /*public double[] getYi() {
-        return yi;
-    }
-
-    public double[][] getYiTotalT() {
-        return yiTotalT;
-    }*/
 
     public BufferedImage getImagen2() {
         return Imagen2;
     }
-     
 }

@@ -5,10 +5,6 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-/**
- *
- * @author Dante Sterpin
- */
 public class ProcesaImagen
 {
     
@@ -70,7 +66,6 @@ public class ProcesaImagen
                 RGB = (a << 24) | (outputRGB[0] << 16) | (outputRGB[1] << 8) | outputRGB[2];
                 
                 Modificada.setRGB(w, h, RGB);
-                //System.out.println(h + " " +w );
             }
         }
         
@@ -81,28 +76,14 @@ public class ProcesaImagen
     {
         int outputRGB[] = new int[3];
         MultiplicaMatrices mm = new MultiplicaMatrices();
-        
-        for(int a = 0;a < valores.length;a++) {
-            for(int b = 0;b < valores[a].length;b++) {
-                //System.out.print(valores[a][b]+"\t");  //AQUI
-            }
-            //System.out.println("");
-        }
         outputRGB = mm.ViMd_Vi(inputRGB, valores);
-      
-        for(int c=0; c<outputRGB.length; c++)
-        {
-            //System.out.print(outputRGB[0]);
-        }
-        //System.out.println("");
-        
         return outputRGB;
     }
     
     public int[][][] MatrizImagen(BufferedImage Imagen)
     {
         
-        int Array3D[][][] = new int[3][Imagen.getHeight()][Imagen.getWidth()];  ///AQUII
+        int Array3D[][][] = new int[3][Imagen.getHeight()][Imagen.getWidth()];  
         
         for(int h=0; h<Imagen.getHeight(); h++)
         {

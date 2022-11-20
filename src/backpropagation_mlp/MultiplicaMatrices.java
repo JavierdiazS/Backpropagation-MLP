@@ -22,17 +22,12 @@ public class MultiplicaMatrices {
                 for(int k=0; k<dA.length; k++)
                 {
                     dR[j] += (dA[k] * (10*B[k][j]));
-                    //System.out.print(B[k][j]+"\t");
                     if(dR[j] < 0) {
                         dRT[j] = 255;
-                        //System.out.print(dRT[j]+"\t");
                     } else if(dR[j] > 0) {
                         dRT[j] = 0;
-                        //System.out.print(dRT[j]+"\t");
                     }
-                    //System.out.println("");
                 }
-                //System.out.println("");
             }
             
             R = new int[B[0].length];
