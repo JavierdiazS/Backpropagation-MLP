@@ -32,3 +32,11 @@ The training examples to be used in the training will be the same, only they'll 
 >Output displayed by the console.
 
 After having performed the training of the neural network, I mean, having calculated the activation potential hi and hj, and the calculation of the activation function (hyperbolic tangent) yi and yj, the variations, the ECM, the values of the weights and thresholds JK and IJ. It is found that with only 55000 iterations, an epsilon value of 0.5, a lambda value of 0.03, an ECM of 0.04 and output values of 0.95 approximated to 1 in the outputs. The training has been a success since the signs of the response data correspond to the desired responses. We also obtain the values of the weights and thresholds JK and IJ.
+
+## Contributing
+
+Please feel free to use it if you are interested in fixing issues and contributing directly to the code base.
+
+## License
+
+Backpropagation is released under the MIT license. See the [LICENSE](/LICENSE) file for details.
